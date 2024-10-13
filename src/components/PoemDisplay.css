@@ -1,0 +1,117 @@
+/* PoemDisplay.css */
+
+/* Container with a floral background */
+.poem-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Takes full viewport height */
+  text-align: center;
+  /* background-image: url('/assets/floralbackground.jpg');  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  color: #dac0bf; /* Light color for text */
+}
+
+/* Link styling */
+.poem-link {
+  text-decoration: none;
+  color: #ffcccb; /* Light pink */
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border: 2px solid #ffcccb;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: transparent;
+}
+
+.poem-link:hover {
+  color: #fff;
+  background-color: rgba(98, 186, 155, 0.6); /* Semi-transparent background */
+}
+
+/* Content styling */
+.poem-content {
+  margin-top: 20px;
+  font-size: 25px;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  padding: 20px;
+  background-color: rgba(127, 168, 153, 0.7); /* Dark semi-transparent background */
+  border-radius: 10px;
+}
+
+/* Heading styling */
+h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #d01613; /* Light pink */
+}
+
+/* Typing effect styles */
+.typing-text {
+  white-space: pre-wrap; /* Preserve line breaks */
+  border-right: 2px solid #e21511; /* Simulate a typing cursor */
+  width: fit-content;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+  animation: blink 0.7s steps(2, start) infinite;
+  color: #ffcbfd; /* Light pink */
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  from { border-right-color: #ffcccb; }
+  to { border-right-color: transparent; }
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 100, 100, 0.7); /* Soft heart color */
+  transform: rotate(45deg);
+  animation: floating-hearts 3s ease-in-out infinite;
+}
+
+.heart:before, .heart:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 100, 100, 0.7); /* Soft heart color */
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -10px;
+  left: 0;
+}
+
+.heart:after {
+  left: 10px;
+  top: 0;
+}
+
+/* Floating hearts animation */
+@keyframes floating-hearts {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-200px); opacity: 0; }
+}
+
+/* Adjust heart positions */
+.heart:nth-child(odd) {
+  animation-duration: 4s;
+}
+
+.heart:nth-child(even) {
+  animation-duration: 6s;
+}
